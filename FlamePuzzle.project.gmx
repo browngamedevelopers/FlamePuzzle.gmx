@@ -6,8 +6,8 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sprMouse</sprite>
     <sprite>sprites\sprPlayer</sprite>
+    <sprite>sprites\sprMouse</sprite>
     <sprite>sprites\sprEndLevel</sprite>
     <sprites name="lamps">
       <sprite>sprites\sprConnectLamp</sprite>
@@ -21,21 +21,21 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
-    <object>objects\objMouse</object>
     <object>objects\objMenu</object>
     <object>objects\objPlayer</object>
+    <object>objects\objMouse</object>
     <object>objects\objEndLevel</object>
+    <objects name="rooms">
+      <object>objects\objRoom0</object>
+    </objects>
     <objects name="lamps">
-      <object>objects\objConnectLamp0</object>
-      <object>objects\objConnectLamp1</object>
+      <object>objects\objConnectLamp</object>
       <object>objects\objTeleportLamp</object>
     </objects>
     <objects name="walkable">
       <object>objects\objWalkable</object>
       <object>objects\objPlatform</object>
-      <objects name="bridges">
-        <object>objects\objBridge</object>
-      </objects>
+      <object>objects\objBridge</object>
     </objects>
   </objects>
   <rooms name="rooms">
