@@ -6,6 +6,7 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprite>sprites\sprMouse</sprite>
     <sprite>sprites\sprPlayer</sprite>
     <sprite>sprites\sprEndLevel</sprite>
     <sprites name="lamps">
@@ -20,6 +21,7 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
+    <object>objects\objMouse</object>
     <object>objects\objMenu</object>
     <object>objects\objPlayer</object>
     <object>objects\objEndLevel</object>
