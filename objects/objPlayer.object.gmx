@@ -25,9 +25,57 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>direction += 90; //Orients player up
+            <string>
+///Player variables
+direction += 90; //Orients player up
 globalvar moving;
+
+alarm[0] = 1;
+
+blocksize = 32;
+playerspeed = 8;
 depth = -5000;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Movement Alarm Code
+if(position_meeting(x + lengthdir_x(blocksize, direction+90),
+                     y + lengthdir_y(blocksize, direction+90), objWalkable)){
+    direction += 90;
+} else if(position_meeting(x + lengthdir_x(blocksize, direction-90),
+                            y + lengthdir_y(blocksize, direction-90), objWalkable)){
+    direction -=90;
+}
+
+if(position_meeting(x + lengthdir_x(blocksize, direction),
+                     y + lengthdir_y(blocksize, direction), objWalkable)){
+    speed = playerspeed;
+    global.moving = true;
+}else {
+    speed = 0;
+    global.moving = false;
+}
+alarm[0] = blocksize/playerspeed;
 </string>
           </argument>
         </arguments>
@@ -52,7 +100,7 @@ depth = -5000;
             <kind>1</kind>
             <string>image_angle = direction;
 
-tile = instance_position(x, y, objWalkable); // Walkable platform under the player
+/*tile = instance_position(x, y, objWalkable); // Walkable platform under the player
 
 if tile != noone {
     tilewidthoff = (tile.sprite_width * 0.5) + 0.01;
@@ -86,29 +134,7 @@ if tile != noone {
         global.moving = false;
     }
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>draw_self();
+*/
 </string>
           </argument>
         </arguments>
