@@ -35,7 +35,6 @@ alarm[0] = 1;
 blocksize = 32;
 playerspeed = 8;
 depth = -5000;
-
 </string>
           </argument>
         </arguments>
@@ -99,7 +98,6 @@ alarm[0] = blocksize/playerspeed;
           <argument>
             <kind>1</kind>
             <string>image_angle = direction;
-
 /*tile = instance_position(x, y, objWalkable); // Walkable platform under the player
 
 if tile != noone {
