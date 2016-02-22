@@ -21,11 +21,13 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
+    <object>objects\objLightLevel</object>
     <object>objects\objMouse</object>
     <object>objects\objMenu</object>
     <object>objects\objPlayer</object>
     <object>objects\objEndLevel</object>
     <objects name="lamps">
+      <object>objects\objAllLamps</object>
       <object>objects\objConnectLamp0</object>
       <object>objects\objConnectLamp1</object>
       <object>objects\objTeleportLamp</object>
