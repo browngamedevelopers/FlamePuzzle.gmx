@@ -60,38 +60,43 @@ draw_set_blend_mode(bm_subtract)//We're starting to substract here
 var j;
 var i;
 var numcircles = 30;
-var largestsize = 64;
+var largestsize;
 draw_set_alpha(1/numcircles);
 for (i=0; i&lt;= numcircles; i++){
+largestsize = objPlayer.lightSize;
     draw_circle(objPlayer.x, objPlayer.y,
          largestsize - (largestsize/numcircles)*i, false) //This is what we substract!!! A simple circle.
 }
 
 numcircles = 30;
-largestsize = 64;
+//largestsize = 64;
 draw_set_alpha(1/numcircles);
 for (i=0; i&lt;= numcircles; i++){
+    //largestsize = objMouse.lightSize;
     draw_circle(mouse_x, mouse_y,
          largestsize - (largestsize/numcircles)*i, false) //This is what we substract!!! A simple circle.
 }
 
 var lightalamp;
-largestsize = 64;
+//largestsize = 64;
 numcircles = 25;
 draw_set_alpha(1/numcircles);
 for (i = 0; i &lt; instance_number(objAllLamps); i += 1){
+    
    lightalamp = instance_find(objAllLamps,i);
+    largestsize = lightalamp.lightSize;
    for (j=0; j&lt;= numcircles; j++){
        draw_circle(lightalamp.x, lightalamp.y, largestsize - (largestsize/numcircles)*j, false);
    }
 }
 
 var lightabridge;
-largestsize = 64;
+//largestsize = 64;
 numcircles = 25;
 draw_set_alpha(1/numcircles);
 for (i = 0; i &lt; instance_number(objBridge); i += 1){
    lightabridge = instance_find(objBridge,i);
+    largestsize = lightabridge.lightSize;
    for (j=0; j&lt;= numcircles; j++){
         draw_circle(lightabridge.x, lightabridge.y,  largestsize - (largestsize/numcircles)*j, false);
    }

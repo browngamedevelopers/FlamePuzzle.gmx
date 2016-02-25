@@ -25,7 +25,6 @@
     <object>objects\objMouse</object>
     <object>objects\objMenu</object>
     <object>objects\objPlayer</object>
-    <object>objects\objMouse</object>
     <object>objects\objEndLevel</object>
     <objects name="rooms">
       <object>objects\objRoom0</object>
@@ -42,6 +41,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rmLightDemo</room>
     <room>rooms\menu</room>
     <room>rooms\room0</room>
     <room>rooms\room1</room>
