@@ -25,6 +25,9 @@
       <sprite>sprites\sprCollectitblesButton</sprite>
       <sprite>sprites\sprSettingsButton</sprite>
     </sprites>
+    <sprite>sprites\sprLevel</sprite>
+    <sprite>sprites\sprLock</sprite>
+    <sprite>sprites\sprRope</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\potential_tiles</background>
@@ -36,12 +39,12 @@
     <script>scripts\readSave.gml</script>
     <script>scripts\saveLevel.gml</script>
     <script>scripts\deleteSave.gml</script>
+    <script>scripts\drawRope.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\objZoomingtemp</object>
     <object>objects\objLightLevel</object>
     <object>objects\objMouse</object>
-    <object>objects\objMenu</object>
     <object>objects\objPlayer</object>
     <object>objects\objRelic</object>
     <object>objects\objEndLevel</object>
@@ -62,10 +65,14 @@
     </objects>
     <objects name="menuObjects">
       <object>objects\objNewGameButton</object>
+      <object>objects\objMenu</object>
       <object>objects\objSelectLevelButton</object>
       <object>objects\objCollectiblesButton</object>
       <object>objects\objSettingsButton</object>
       <object>objects\objExitButton</object>
+      <object>objects\objLevelDisplay</object>
+      <object>objects\objLevelSelect</object>
+      <object>objects\objLevelLock</object>
     </objects>
   </objects>
   <rooms name="rooms">
