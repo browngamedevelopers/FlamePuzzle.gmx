@@ -27,12 +27,25 @@
             <kind>1</kind>
             <string>///Create Lamps and bridges
 
-//Maybe make these arrays to access them easier?
-cl0 = instance_position(320, 448, objConnectLamp);
-cl1 = instance_position(32, 448, objConnectLamp);
+//Player
+player = instance_position(480, 192, objPlayer);
 
-br0 = instance_position(256, 448, objBridge);
-br1 = instance_position(128, 448, objBridge);
+//Maybe make these arrays to access them easier?
+cl0 = instance_position(544, 288, objConnectLamp);
+cl1 = instance_position(416, 416, objConnectLamp);
+cl2 = instance_position(544, 416, objConnectLamp);
+cl3 = instance_position(416, 576, objConnectLamp);
+cl4 = instance_position(544, 576, objConnectLamp);
+
+br0 = instance_position(480, 288, objBridge);
+br1 = instance_position(480, 576, objBridge);
+
+tl0 = instance_position(352, 352, objTeleportLamp);
+tl1 = instance_position(608, 352, objTeleportLamp);
+tl2 = instance_position(480, 480, objTeleportLamp);
+
+pl0 = instance_position(448, 352, objPlatform);
+pl1 = instance_position(512, 352, objPlatform);
 </string>
           </argument>
         </arguments>
@@ -61,7 +74,39 @@ br1 = instance_position(128, 448, objBridge);
     instance_deactivate_object(br0);
 }
     
-if(cl1.on) {
+if(!cl1.on) {
+    instance_activate_object(pl0);
+} else {
+    instance_deactivate_object(pl0);
+}
+
+if(!cl2.on) {
+    instance_activate_object(pl1);
+} else {
+    instance_deactivate_object(pl1);
+}
+
+if(tl0.teleport) {
+    player.x = tl2.x;
+    player.y = tl2.y;
+    player.direction = 270;
+    tl0.teleport = false;
+}
+    
+if(tl1.teleport) {
+    player.x = tl2.x;
+    player.y = tl2.y;
+    player.direction = 270;
+    tl1.teleport = false;
+}
+
+if(cl3.on) {
+    instance_activate_object(cl4);
+} else {
+    instance_deactivate_object(cl4);
+}
+
+if(cl3.on &amp;&amp; cl4.on) {
     instance_activate_object(br1);
 } else {
     instance_deactivate_object(br1);

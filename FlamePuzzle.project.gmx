@@ -69,6 +69,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rmTut1</room>
     <rooms name="menus">
       <room>rooms\menu</room>
       <room>rooms\collectibles</room>
@@ -76,7 +77,6 @@
       <room>rooms\levelSelect</room>
     </rooms>
     <room>rooms\room0</room>
-    <room>rooms\room9</room>
     <room>rooms\rmLightDemo</room>
     <room>rooms\menu</room>
     <room>rooms\room1</room>
