@@ -30,14 +30,36 @@
 direction += 90; //Orients player up
 globalvar moving;
 
-alarm[0] = 1;
-
-blocksize = 32;
-playerspeed = 8;
+allowTeleport = true;
 depth = -5000;
-
-
 lightSize = 60;
+
+alarm[0] = 1;
+alarm[1] = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>allowTeleport = true;
+alarm[1] = (BLOCK_SIZE/PLAYER_SPEED) * 8;
 </string>
           </argument>
         </arguments>
@@ -60,23 +82,23 @@ lightSize = 60;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(position_meeting(x + lengthdir_x(blocksize, direction+90),
-                     y + lengthdir_y(blocksize, direction+90), objWalkable)){
+            <string>if(position_meeting(x + lengthdir_x(BLOCK_SIZE, direction+90),
+                     y + lengthdir_y(BLOCK_SIZE, direction+90), objWalkable)){
     direction += 90;
-} else if(position_meeting(x + lengthdir_x(blocksize, direction-90),
-                            y + lengthdir_y(blocksize, direction-90), objWalkable)){
+} else if(position_meeting(x + lengthdir_x(BLOCK_SIZE, direction-90),
+                            y + lengthdir_y(BLOCK_SIZE, direction-90), objWalkable)){
     direction -=90;
 }
 
-if(position_meeting(x + lengthdir_x(blocksize, direction),
-                     y + lengthdir_y(blocksize, direction), objWalkable)){
-    speed = playerspeed;
+if(position_meeting(x + lengthdir_x(BLOCK_SIZE, direction),
+                     y + lengthdir_y(BLOCK_SIZE, direction), objWalkable)){
+    speed = PLAYER_SPEED;
     global.moving = true;
 }else {
     speed = 0;
     global.moving = false;
 }
-alarm[0] = blocksize/playerspeed;
+alarm[0] = BLOCK_SIZE/PLAYER_SPEED;
 </string>
           </argument>
         </arguments>

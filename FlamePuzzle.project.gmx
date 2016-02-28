@@ -28,6 +28,7 @@
     <object>objects\objEndLevel</object>
     <objects name="rooms">
       <object>objects\objRoom0</object>
+      <object>objects\objRoom1</object>
     </objects>
     <objects name="lamps">
       <object>objects\objAllLamps</object>
@@ -42,10 +43,14 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\menu</room>
+    <room>rooms\room1</room>
     <room>rooms\room0</room>
     <room>rooms\rmLightDemo</room>
-    <room>rooms\room1</room>
   </rooms>
+  <constants number="2">
+    <constant name="PLAYER_SPEED">8</constant>
+    <constant name="BLOCK_SIZE">32</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

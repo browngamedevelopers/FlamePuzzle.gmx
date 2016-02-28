@@ -25,9 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Create Lamps and bridges
+            <string>//Player
+player = instance_position(256, 576, objPlayer);
 
-//Maybe make these arrays to access them easier?
+//Create Lamps and bridges
+
 cl0 = instance_position(320, 448, objConnectLamp);
 cl1 = instance_position(32, 448, objConnectLamp);
 
