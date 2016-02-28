@@ -60,8 +60,7 @@ lightSize = 60;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Movement Alarm Code
-if(position_meeting(x + lengthdir_x(blocksize, direction+90),
+            <string>if(position_meeting(x + lengthdir_x(blocksize, direction+90),
                      y + lengthdir_y(blocksize, direction+90), objWalkable)){
     direction += 90;
 } else if(position_meeting(x + lengthdir_x(blocksize, direction-90),
