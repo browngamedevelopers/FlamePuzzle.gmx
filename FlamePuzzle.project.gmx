@@ -24,6 +24,8 @@
       <sprite>sprites\sprCollectitblesButton</sprite>
       <sprite>sprites\sprSettingsButton</sprite>
     </sprites>
+    <sprite>sprites\sprLevel</sprite>
+    <sprite>sprites\sprLock</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -35,7 +37,6 @@
   <objects name="objects">
     <object>objects\objLightLevel</object>
     <object>objects\objMouse</object>
-    <object>objects\objMenu</object>
     <object>objects\objPlayer</object>
     <object>objects\objEndLevel</object>
     <objects name="rooms">
@@ -53,10 +54,14 @@
     </objects>
     <objects name="menuObjects">
       <object>objects\objNewGameButton</object>
+      <object>objects\objMenu</object>
       <object>objects\objSelectLevelButton</object>
       <object>objects\objCollectiblesButton</object>
       <object>objects\objSettingsButton</object>
       <object>objects\objExitButton</object>
+      <object>objects\objLevelDisplay</object>
+      <object>objects\objLevelSelect</object>
+      <object>objects\objLevelLock</object>
     </objects>
   </objects>
   <rooms name="rooms">

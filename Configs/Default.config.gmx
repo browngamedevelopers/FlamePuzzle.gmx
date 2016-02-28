@@ -458,7 +458,7 @@
   </Options>
   <ConfigConstants>
     <constants number="1">
-      <constant name="LEVELS">6</constant>
+      <constant name="LEVELS">8</constant>
     </constants>
   </ConfigConstants>
 </Config>
