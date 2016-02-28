@@ -24,6 +24,7 @@
       <sprite>sprites\sprCollectitblesButton</sprite>
       <sprite>sprites\sprSettingsButton</sprite>
     </sprites>
+    <sprite>sprites\sprRope</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\potential_tiles</background>
@@ -35,6 +36,7 @@
     <script>scripts\readSave.gml</script>
     <script>scripts\saveLevel.gml</script>
     <script>scripts\deleteSave.gml</script>
+    <script>scripts\drawRope.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\objZoomingtemp</object>
