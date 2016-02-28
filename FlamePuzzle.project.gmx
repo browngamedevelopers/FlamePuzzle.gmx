@@ -18,9 +18,16 @@
       <sprite>sprites\sprBridge</sprite>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\potential_tiles</background>
+  </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scrZoomIn.gml</script>
+    <script>scripts\scrZoomOut.gml</script>
+  </scripts>
   <objects name="objects">
+    <object>objects\objZoomingtemp</object>
     <object>objects\objLightLevel</object>
     <object>objects\objMouse</object>
     <object>objects\objMenu</object>
@@ -41,9 +48,10 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\menu</room>
+    <room>rooms\rmZoomDemo</room>
     <room>rooms\room0</room>
     <room>rooms\rmLightDemo</room>
+    <room>rooms\menu</room>
     <room>rooms\room1</room>
   </rooms>
   <help>
