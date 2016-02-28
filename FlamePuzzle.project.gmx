@@ -30,9 +30,63 @@
     <background>background\potential_tiles</background>
   </backgrounds>
   <paths name="paths"/>
-  <scripts name="scripts"/>
-  <objects name="objects"/>
-  <rooms name="rooms"/>
+  <scripts name="scripts">
+    <script>scripts\scrZoomIn.gml</script>
+    <script>scripts\scrZoomOut.gml</script>
+    <script>scripts\readSave.gml</script>
+    <script>scripts\saveLevel.gml</script>
+    <script>scripts\deleteSave.gml</script>
+    <script>scripts\drawRope.gml</script>
+  </scripts>
+  <objects name="objects">
+    <object>objects\objZooming</object>
+    <object>objects\objLightLevel</object>
+    <object>objects\objMouse</object>
+    <object>objects\objMenu</object>
+    <object>objects\objPlayer</object>
+    <object>objects\objEndLevel</object>
+    <objects name="rooms">
+      <object>objects\objRoom0</object>
+      <object>objects\objRoomTut1</object>
+      <object>objects\objRoom1</object>
+    </objects>
+    <objects name="lamps">
+      <object>objects\objAllLamps</object>
+      <object>objects\objConnectLamp</object>
+      <object>objects\objTeleportLamp</object>
+    </objects>
+    <objects name="walkable">
+      <object>objects\objWalkable</object>
+      <object>objects\objPlatform</object>
+      <object>objects\objBridge</object>
+    </objects>
+    <objects name="menuObjects">
+      <object>objects\objNewGameButton</object>
+      <object>objects\objSelectLevelButton</object>
+      <object>objects\objCollectiblesButton</object>
+      <object>objects\objSettingsButton</object>
+      <object>objects\objExitButton</object>
+    </objects>
+  </objects>
+  <rooms name="rooms">
+    <rooms name="menus">
+      <room>rooms\menu</room>
+      <room>rooms\collectibles</room>
+      <room>rooms\settings</room>
+      <room>rooms\levelSelect</room>
+    </rooms>
+    <room>rooms\room0</room>
+    <room>rooms\room9</room>
+    <room>rooms\rmLightDemo</room>
+    <room>rooms\menu</room>
+    <room>rooms\room1</room>
+    <room>rooms\rmZoomDemo</room>
+    <room>rooms\rmLightDemo</room>
+  </rooms>
+  <constants number="2">
+    <constant name="PLAYER_SPEED">8</constant>
+    <constant name="BLOCK_SIZE">32</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
