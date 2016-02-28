@@ -95,7 +95,9 @@ if(left &amp;&amp; !right &amp;&amp; !forward) {
     speed = PLAYER_SPEED;
     global.moving = true;
 } else if(right &amp;&amp; !left &amp;&amp; !forward) {
-    direction -= 90;
+    direction -= 90;   
+    speed = PLAYER_SPEED;
+    global.moving = true;
 } else if(forward &amp;&amp; !left &amp;&amp; !right) {
     speed = PLAYER_SPEED;
     global.moving = true;
