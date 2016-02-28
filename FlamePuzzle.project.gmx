@@ -20,6 +20,11 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\readSave.gml</script>
+    <script>scripts\saveLevel.gml</script>
+    <script>scripts\deleteSave.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\objLightLevel</object>
     <object>objects\objMouse</object>
