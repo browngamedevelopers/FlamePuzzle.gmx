@@ -17,6 +17,13 @@
       <sprite>sprites\sprPlatform</sprite>
       <sprite>sprites\sprBridge</sprite>
     </sprites>
+    <sprites name="buttons">
+      <sprite>sprites\sprExitButton</sprite>
+      <sprite>sprites\sprNewGameButton</sprite>
+      <sprite>sprites\sprSelectLevelButton</sprite>
+      <sprite>sprites\sprCollectitblesButton</sprite>
+      <sprite>sprites\sprSettingsButton</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -44,9 +51,21 @@
       <object>objects\objPlatform</object>
       <object>objects\objBridge</object>
     </objects>
+    <objects name="menuObjects">
+      <object>objects\objNewGameButton</object>
+      <object>objects\objSelectLevelButton</object>
+      <object>objects\objCollectiblesButton</object>
+      <object>objects\objSettingsButton</object>
+      <object>objects\objExitButton</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\menu</room>
+    <rooms name="menus">
+      <room>rooms\menu</room>
+      <room>rooms\collectibles</room>
+      <room>rooms\settings</room>
+      <room>rooms\levelSelect</room>
+    </rooms>
     <room>rooms\room0</room>
     <room>rooms\rmLightDemo</room>
     <room>rooms\room1</room>
