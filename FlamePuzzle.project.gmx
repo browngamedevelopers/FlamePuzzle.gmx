@@ -37,7 +37,7 @@
     <script>scripts\deleteSave.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\objZoomingtemp</object>
+    <object>objects\objZooming</object>
     <object>objects\objLightLevel</object>
     <object>objects\objMouse</object>
     <object>objects\objMenu</object>
@@ -45,6 +45,7 @@
     <object>objects\objEndLevel</object>
     <objects name="rooms">
       <object>objects\objRoom0</object>
+      <object>objects\objRoomTut1</object>
     </objects>
     <objects name="lamps">
       <object>objects\objAllLamps</object>
@@ -73,6 +74,7 @@
       <room>rooms\levelSelect</room>
     </rooms>
     <room>rooms\room0</room>
+    <room>rooms\room9</room>
     <room>rooms\rmLightDemo</room>
     <room>rooms\menu</room>
     <room>rooms\room1</room>

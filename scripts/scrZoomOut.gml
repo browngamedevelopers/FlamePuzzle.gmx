@@ -27,6 +27,7 @@ if(view_wview[0] < room_width){
 }else {
     view_wview[0] = room_width;
     view_hview[0] = room_height;
+    instance_destroy()
     //show_message("done zooming out!");
 }
 
