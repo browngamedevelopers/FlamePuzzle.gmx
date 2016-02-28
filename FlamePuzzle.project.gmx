@@ -7,6 +7,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\sprPlayer</sprite>
+    <sprite>sprites\sprRelic</sprite>
     <sprite>sprites\sprMouse</sprite>
     <sprite>sprites\sprEndLevel</sprite>
     <sprites name="lamps">
@@ -24,6 +25,8 @@
       <sprite>sprites\sprCollectitblesButton</sprite>
       <sprite>sprites\sprSettingsButton</sprite>
     </sprites>
+    <sprite>sprites\sprLevel</sprite>
+    <sprite>sprites\sprLock</sprite>
     <sprite>sprites\sprRope</sprite>
   </sprites>
   <backgrounds name="background">
@@ -42,13 +45,14 @@
     <object>objects\objZooming</object>
     <object>objects\objLightLevel</object>
     <object>objects\objMouse</object>
-    <object>objects\objMenu</object>
     <object>objects\objPlayer</object>
+    <object>objects\objRelic</object>
     <object>objects\objEndLevel</object>
     <objects name="rooms">
       <object>objects\objRoom0</object>
       <object>objects\objRoomTut1</object>
       <object>objects\objRoom1</object>
+      <object>objects\objRoomFork</object>
     </objects>
     <objects name="lamps">
       <object>objects\objAllLamps</object>
@@ -62,10 +66,14 @@
     </objects>
     <objects name="menuObjects">
       <object>objects\objNewGameButton</object>
+      <object>objects\objMenu</object>
       <object>objects\objSelectLevelButton</object>
       <object>objects\objCollectiblesButton</object>
       <object>objects\objSettingsButton</object>
       <object>objects\objExitButton</object>
+      <object>objects\objLevelDisplay</object>
+      <object>objects\objLevelSelect</object>
+      <object>objects\objLevelLock</object>
     </objects>
   </objects>
   <rooms name="rooms">
@@ -79,6 +87,7 @@
     <room>rooms\room0</room>
     <room>rooms\rmLightDemo</room>
     <room>rooms\menu</room>
+    <room>rooms\rmFork</room>
     <room>rooms\room1</room>
     <room>rooms\rmZoomDemo</room>
     <room>rooms\rmLightDemo</room>
