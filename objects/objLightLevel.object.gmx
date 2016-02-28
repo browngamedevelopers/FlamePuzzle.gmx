@@ -72,7 +72,7 @@ numcircles = 30;
 //largestsize = 64;
 draw_set_alpha(1/numcircles);
 for (i=0; i&lt;= numcircles; i++){
-    //largestsize = objMouse.lightSize;
+    largestsize = objMouse.lightSize;
     draw_circle(mouse_x, mouse_y,
          largestsize - (largestsize/numcircles)*i, false) //This is what we substract!!! A simple circle.
 }
@@ -84,9 +84,11 @@ draw_set_alpha(1/numcircles);
 for (i = 0; i &lt; instance_number(objAllLamps); i += 1){
     
    lightalamp = instance_find(objAllLamps,i);
-    largestsize = lightalamp.lightSize;
-   for (j=0; j&lt;= numcircles; j++){
-       draw_circle(lightalamp.x, lightalamp.y, largestsize - (largestsize/numcircles)*j, false);
+   if(lightalamp.on){
+        largestsize = lightalamp.lightSize;
+       for (j=0; j&lt;= numcircles; j++){
+           draw_circle(lightalamp.x, lightalamp.y, largestsize - (largestsize/numcircles)*j, false);
+       }
    }
 }
 
