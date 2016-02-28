@@ -82,19 +82,24 @@ alarm[1] = (BLOCK_SIZE/PLAYER_SPEED) * 8;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(position_meeting(x + lengthdir_x(BLOCK_SIZE, direction+90),
-                     y + lengthdir_y(BLOCK_SIZE, direction+90), objWalkable)){
-    direction += 90;
-} else if(position_meeting(x + lengthdir_x(BLOCK_SIZE, direction-90),
-                            y + lengthdir_y(BLOCK_SIZE, direction-90), objWalkable)){
-    direction -=90;
-}
+            <string>left = position_meeting(x + lengthdir_x(BLOCK_SIZE, direction+90),
+                     y + lengthdir_y(BLOCK_SIZE, direction+90), objWalkable);
+right = position_meeting(x + lengthdir_x(BLOCK_SIZE, direction-90),
+                            y + lengthdir_y(BLOCK_SIZE, direction-90), objWalkable);
 
-if(position_meeting(x + lengthdir_x(BLOCK_SIZE, direction),
-                     y + lengthdir_y(BLOCK_SIZE, direction), objWalkable)){
+forward = position_meeting(x + lengthdir_x(BLOCK_SIZE, direction),
+                     y + lengthdir_y(BLOCK_SIZE, direction), objWalkable);
+
+if(left &amp;&amp; !right &amp;&amp; !forward) {
+    direction += 90;
     speed = PLAYER_SPEED;
     global.moving = true;
-}else {
+} else if(right &amp;&amp; !left &amp;&amp; !forward) {
+    direction -= 90;
+} else if(forward &amp;&amp; !left &amp;&amp; !right) {
+    speed = PLAYER_SPEED;
+    global.moving = true;
+} else {
     speed = 0;
     global.moving = false;
 }

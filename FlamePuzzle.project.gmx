@@ -7,6 +7,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\sprPlayer</sprite>
+    <sprite>sprites\sprRelic</sprite>
     <sprite>sprites\sprMouse</sprite>
     <sprite>sprites\sprEndLevel</sprite>
     <sprites name="lamps">
@@ -42,10 +43,12 @@
     <object>objects\objMouse</object>
     <object>objects\objMenu</object>
     <object>objects\objPlayer</object>
+    <object>objects\objRelic</object>
     <object>objects\objEndLevel</object>
     <objects name="rooms">
       <object>objects\objRoom0</object>
       <object>objects\objRoom1</object>
+      <object>objects\objRoomFork</object>
     </objects>
     <objects name="lamps">
       <object>objects\objAllLamps</object>
@@ -73,6 +76,7 @@
       <room>rooms\levelSelect</room>
     </rooms>
     <room>rooms\room0</room>
+    <room>rooms\rmFork</room>
     <room>rooms\room1</room>
     <room>rooms\rmZoomDemo</room>
     <room>rooms\rmLightDemo</room>
