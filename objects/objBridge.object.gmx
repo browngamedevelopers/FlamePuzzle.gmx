@@ -52,7 +52,7 @@ lightSize = 60;
             <kind>1</kind>
             <string>var z = choose(-2, 0, 2);
 lightSize +=z;
-clamp(lightSize, 55, 74);
+lightSize = clamp(lightSize, 55, 74);
 </string>
           </argument>
         </arguments>

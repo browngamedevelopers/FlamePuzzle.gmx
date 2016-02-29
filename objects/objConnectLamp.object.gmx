@@ -28,7 +28,6 @@
             <string>clickable = false;
 on = false;
 image_speed = 0;
-
 lightSize = 60;
 </string>
           </argument>

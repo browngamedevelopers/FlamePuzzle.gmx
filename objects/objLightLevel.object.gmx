@@ -68,6 +68,13 @@ largestsize = objPlayer.lightSize;
          largestsize - (largestsize/numcircles)*i, false) //This is what we substract!!! A simple circle.
 }
 
+/*draw_set_alpha(1/numcircles);
+for (i=0; i&lt;= numcircles; i++){
+    largestsize = objEndLevel.lightSize;
+    draw_circle(objEndLevel.x, objPlayer.y,
+         largestsize - (largestsize/numcircles)*i, false) //This is what we substract!!! A simple circle.
+}*/
+
 numcircles = 30;
 //largestsize = 64;
 draw_set_alpha(1/numcircles);

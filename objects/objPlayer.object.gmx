@@ -134,7 +134,7 @@ alarm[0] = BLOCK_SIZE/PLAYER_SPEED;
 
 var z = choose(-2, 0, 2);
 lightSize +=z;
-clamp(lightSize, 55, 74);
+lightSize = clamp(lightSize, 55, 74);
 /*tile = instance_position(x, y, objWalkable); // Walkable platform under the player
 
 if tile != noone {
