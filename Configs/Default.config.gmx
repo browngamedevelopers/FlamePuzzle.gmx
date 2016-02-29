@@ -457,8 +457,9 @@
     <option_xbone_title_id></option_xbone_title_id>
   </Options>
   <ConfigConstants>
-    <constants number="1">
+    <constants number="2">
       <constant name="LEVELS">8</constant>
+      <constant name="STEP_INTERVAL">5</constant>
     </constants>
   </ConfigConstants>
 </Config>

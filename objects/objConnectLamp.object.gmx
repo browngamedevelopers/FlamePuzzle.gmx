@@ -138,6 +138,11 @@ image_index = max(imagestart, image_index mod imageend);
             <kind>1</kind>
             <string>if(clickable &amp;&amp; !global.moving) {
     on = !on;
+    if (on) {
+        audio_play_sound(sndLampOn, 10, false);
+    } else {
+        audio_play_sound(sndLampOff, 10, false);
+    }
 }
 </string>
           </argument>

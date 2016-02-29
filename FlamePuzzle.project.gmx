@@ -5,7 +5,10 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\footstep</sound>
+    <sound>sound\sndFootstep</sound>
+    <sound>sound\sndLampOn</sound>
+    <sound>sound\sndLampOff</sound>
+    <sound>sound\sndTeleport</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprDeadPlayer</sprite>
@@ -31,9 +34,12 @@
     <sprite>sprites\sprLevel</sprite>
     <sprite>sprites\sprLock</sprite>
     <sprite>sprites\sprRope</sprite>
+    <sprite>sprites\sprBackButton</sprite>
+    <sprite>sprites\sprTitle</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\potential_tiles</background>
+    <background>background\menuBG</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -44,6 +50,10 @@
     <script>scripts\deleteSave.gml</script>
     <script>scripts\drawRope.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\MenuFont</font>
+    <font>fonts\MenuSmaller</font>
+  </fonts>
   <objects name="objects">
     <object>objects\objZooming</object>
     <object>objects\objLightLevel</object>
@@ -73,15 +83,23 @@
       <object>objects\objBridge</object>
     </objects>
     <objects name="menuObjects">
-      <object>objects\objNewGameButton</object>
       <object>objects\objMenu</object>
-      <object>objects\objSelectLevelButton</object>
-      <object>objects\objCollectiblesButton</object>
-      <object>objects\objSettingsButton</object>
-      <object>objects\objExitButton</object>
       <object>objects\objLevelDisplay</object>
       <object>objects\objLevelSelect</object>
       <object>objects\objLevelLock</object>
+      <object>objects\objSettings</object>
+      <object>objects\objTitle</object>
+      <objects name="buttons">
+        <object>objects\objSelectLevelButton</object>
+        <object>objects\objSettingsButton</object>
+        <object>objects\objFullscreenToggle</object>
+        <object>objects\objVolumeSlider</object>
+        <object>objects\objCollectiblesButton</object>
+        <object>objects\objBackButton</object>
+        <object>objects\objExitButton</object>
+        <object>objects\objNewGameButton</object>
+      </objects>
+      <object>objects\objReliquary</object>
     </objects>
   </objects>
   <rooms name="rooms">
@@ -97,6 +115,11 @@
       <room>rooms\settings</room>
       <room>rooms\levelSelect</room>
     </rooms>
+    <room>rooms\rmLevel3</room>
+    <room>rooms\rmTut1</room>
+    <room>rooms\rmLevel2</room>
+    <room>rooms\rmLevel1</room>
+    <room>rooms\rmTut2</room>
     <room>rooms\room0</room>
     <room>rooms\rmLightDemo</room>
     <room>rooms\rmFork</room>
