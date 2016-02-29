@@ -8,6 +8,7 @@
     <sound>sound\sndFootstep</sound>
     <sound>sound\sndLampOn</sound>
     <sound>sound\sndLampOff</sound>
+    <sound>sound\sndTeleport</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprPlayer</sprite>
