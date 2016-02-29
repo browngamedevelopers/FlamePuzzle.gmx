@@ -46,11 +46,13 @@
     <object>objects\objLightLevel</object>
     <object>objects\objMouse</object>
     <object>objects\objPlayer</object>
+    <object>objects\objDeadPlayer</object>
     <object>objects\objRelic</object>
     <object>objects\objEndLevel</object>
     <objects name="rooms">
       <object>objects\objRoom0</object>
       <object>objects\objRoomTut1</object>
+      <object>objects\objRoomTut2</object>
       <object>objects\objRoom1</object>
       <object>objects\objRoomLevel1</object>
       <object>objects\objRoomLevel2</object>
@@ -81,6 +83,7 @@
   <rooms name="rooms">
     <room>rooms\rmLevel2</room>
     <room>rooms\rmLevel1</room>
+    <room>rooms\rmTut2</room>
     <room>rooms\rmTut1</room>
     <rooms name="menus">
       <room>rooms\menu</room>

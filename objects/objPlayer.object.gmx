@@ -82,7 +82,13 @@ alarm[1] = (BLOCK_SIZE/PLAYER_SPEED) * 8;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>left = position_meeting(x + lengthdir_x(BLOCK_SIZE, direction+90),
+            <string>under = position_meeting(x,y,objWalkable);
+
+if(!under) {
+    instance_change(objDeadPlayer,true);
+}
+
+left = position_meeting(x + lengthdir_x(BLOCK_SIZE, direction+90),
                      y + lengthdir_y(BLOCK_SIZE, direction+90), objWalkable);
 right = position_meeting(x + lengthdir_x(BLOCK_SIZE, direction-90),
                             y + lengthdir_y(BLOCK_SIZE, direction-90), objWalkable);
