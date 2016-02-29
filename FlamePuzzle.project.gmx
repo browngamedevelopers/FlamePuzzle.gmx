@@ -85,8 +85,6 @@
       <room>rooms\levelSelect</room>
     </rooms>
     <room>rooms\room0</room>
-    <room>rooms\rmLightDemo</room>
-    <room>rooms\menu</room>
     <room>rooms\rmFork</room>
     <room>rooms\room1</room>
     <room>rooms\rmZoomDemo</room>
