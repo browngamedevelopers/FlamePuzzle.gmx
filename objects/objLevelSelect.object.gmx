@@ -30,7 +30,7 @@ with (containerOne) {
     image_index = 0;
     targetRoom = room0;
 }
-if (global.levelArray[0] == 0) {
+if (global.levelCompleteArray[0] == 0) {
     instance_create(containerOne.x, containerOne.y, objLevelLock);
     containerOne.targetRoom = levelSelect;
 }
@@ -40,7 +40,7 @@ with (containerTwo) {
     image_index = 1;
     targetRoom = room1;
 }
-if (global.levelArray[1] == 0) {
+if (global.levelCompleteArray[1] == 0) {
     instance_create(containerTwo.x, containerTwo.y, objLevelLock);
     containerTwo.targetRoom = levelSelect;
 }
@@ -50,7 +50,7 @@ with (containerThree) {
     image_index = 2;
     //targetRoom = room2;
 }
-if (global.levelArray[2] == 0) {
+if (global.levelCompleteArray[2] == 0) {
     instance_create(containerThree.x, containerThree.y, objLevelLock);
     containerThree.targetRoom = levelSelect;
 }
@@ -60,7 +60,7 @@ with (containerFour) {
     image_index = 3;
     //targetRoom = room3;
 }
-if (global.levelArray[3] == 0) {
+if (global.levelCompleteArray[3] == 0) {
     instance_create(containerFour.x, containerFour.y, objLevelLock);
     containerFour.targetRoom = levelSelect;
 }
@@ -70,7 +70,7 @@ with (containerFive) {
     image_index = 4;
     //targetRoom = room4;
 }
-if (global.levelArray[4] == 0) {
+if (global.levelCompleteArray[4] == 0) {
     instance_create(containerFive.x, containerFive.y, objLevelLock);
     containerFive.targetRoom = levelSelect;
 }
@@ -80,7 +80,7 @@ with (containerSix) {
     image_index = 5;
     //targetRoom = room5;
 }
-if (global.levelArray[5] == 0) {
+if (global.levelCompleteArray[5] == 0) {
     instance_create(containerSix.x, containerSix.y, objLevelLock);
     containerSix.targetRoom = levelSelect;
 }
@@ -90,7 +90,7 @@ with (containerSeven) {
     image_index = 6;
     //targetRoom = room6;
 }
-if (global.levelArray[6] == 0) {
+if (global.levelCompleteArray[6] == 0) {
     instance_create(containerSeven.x, containerSeven.y, objLevelLock);
     containerSeven.targetRoom = levelSelect;
 }
@@ -100,10 +100,34 @@ with (containerEight) {
     image_index = 1;
     //targetRoom = room7;
 }
-if (global.levelArray[7] == 0) {
+if (global.levelCompleteArray[7] == 0) {
     instance_create(containerEight.x, containerEight.y, objLevelLock);
     containerEight.targetRoom = levelSelect;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_text(10, 260, "Level 1");
+draw_text(280, 260, "Level 1");
 </string>
           </argument>
         </arguments>
