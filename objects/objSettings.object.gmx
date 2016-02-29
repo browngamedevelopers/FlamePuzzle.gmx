@@ -25,14 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>script_execute(readSave);
-
-instance_create(room_width / 2, room_height / 5, objTitle);
-instance_create(room_width / 2, room_height / 2 - 130, objNewGameButton);
-instance_create(room_width / 2, room_height / 2 - 65, objSelectLevelButton);
-instance_create(room_width / 2, room_height / 2, objCollectiblesButton);
-instance_create(room_width / 2, room_height / 2 + 65, objSettingsButton);
-instance_create(room_width / 2, room_height / 2 + 130, objExitButton);
+            <string>instance_create(room_width / 2, 340, objVolumeSlider);
+instance_create(room_width / 2, 420, objFullscreenToggle);
+instance_create(44, 724, objBackButton);
 </string>
           </argument>
         </arguments>
