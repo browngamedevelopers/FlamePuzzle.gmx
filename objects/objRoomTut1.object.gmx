@@ -39,13 +39,14 @@ cl4 = instance_position(544, 576, objConnectLamp);
 
 br0 = instance_position(480, 288, objBridge);
 br1 = instance_position(480, 576, objBridge);
+br2 = instance_position(448, 352, objBridge);
+br3 = instance_position(512, 352, objBridge);
 
 tl0 = instance_position(352, 352, objTeleportLamp);
 tl1 = instance_position(608, 352, objTeleportLamp);
 tl2 = instance_position(480, 480, objTeleportLamp);
 
-pl0 = instance_position(448, 352, objPlatform);
-pl1 = instance_position(512, 352, objPlatform);
+
 </string>
           </argument>
         </arguments>
@@ -75,15 +76,15 @@ pl1 = instance_position(512, 352, objPlatform);
 }
     
 if(!cl1.on) {
-    instance_activate_object(pl0);
+    instance_activate_object(br2);
 } else {
-    instance_deactivate_object(pl0);
+    instance_deactivate_object(br2);
 }
 
 if(!cl2.on) {
-    instance_activate_object(pl1);
+    instance_activate_object(br3);
 } else {
-    instance_deactivate_object(pl1);
+    instance_deactivate_object(br3);
 }
 
 if(tl0.teleport) {

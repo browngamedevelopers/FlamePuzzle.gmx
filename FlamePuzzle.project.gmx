@@ -81,10 +81,10 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rmTut1</room>
     <room>rooms\rmLevel2</room>
     <room>rooms\rmLevel1</room>
     <room>rooms\rmTut2</room>
-    <room>rooms\rmTut1</room>
     <rooms name="menus">
       <room>rooms\menu</room>
       <room>rooms\collectibles</room>

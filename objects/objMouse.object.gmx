@@ -76,7 +76,7 @@ lightSize = 0;
     lightSize +=z;
     lightSize = clamp(lightSize, mainlightsize - 5, mainlightsize + 5);
 }
-if (numlights &lt; 0) numlights = 0;
+    numlights = clamp(numlights, 1, 5);
 </string>
           </argument>
         </arguments>

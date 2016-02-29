@@ -137,7 +137,7 @@ if(tl3.teleport) {
     player.x = tl5.x;
     player.y = tl5.y;
     player.direction = 180;
-    tl2.teleport = false;
+    tl4.teleport = false;
 }
 //bottom
 
@@ -169,13 +169,13 @@ if(tl4.teleport) {
     player.x = tl6.x;
     player.y = tl6.y;
     player.direction = 0;
-    tl2.teleport = false;
+    tl4.teleport = false;
 }
 if(tl5.teleport) {
     player.x = tl8.x;
     player.y = tl8.y;
     player.direction = 0;
-    tl2.teleport = false;
+    tl5.teleport = false;
 }
 //top
 

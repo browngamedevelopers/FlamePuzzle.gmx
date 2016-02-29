@@ -59,7 +59,7 @@ alarm[1] = 1;
           <argument>
             <kind>1</kind>
             <string>allowTeleport = true;
-alarm[1] = (BLOCK_SIZE/PLAYER_SPEED) * 8;
+//alarm[1] = (BLOCK_SIZE/PLAYER_SPEED) * 8;
 </string>
           </argument>
         </arguments>
