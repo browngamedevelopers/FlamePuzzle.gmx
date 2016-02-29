@@ -56,6 +56,7 @@
       <object>objects\objRoom1</object>
       <object>objects\objRoomLevel1</object>
       <object>objects\objRoomLevel2</object>
+      <object>objects\objRoomLevel3</object>
       <object>objects\objRoomFork</object>
     </objects>
     <objects name="lamps">
@@ -81,6 +82,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rmLevel3</room>
     <room>rooms\rmTut1</room>
     <room>rooms\rmLevel2</room>
     <room>rooms\rmLevel1</room>
