@@ -125,6 +125,11 @@ lightSize = clamp(lightSize, 55, 74);
             <string>if(clickable &amp;&amp; !global.moving) {
     image_index += 1;
     on = !on;
+    if (on) {
+        audio_play_sound(sndLampOn, 10, false);
+    } else {
+        audio_play_sound(sndLampOff, 10, false);
+    }
 }
 </string>
           </argument>

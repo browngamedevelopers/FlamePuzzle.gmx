@@ -6,6 +6,8 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\sndFootstep</sound>
+    <sound>sound\sndLampOn</sound>
+    <sound>sound\sndLampOff</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprPlayer</sprite>
