@@ -103,18 +103,18 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rmLevel3</room>
     <room>rooms\room14</room>
-    <room>rooms\rmTut2</room>
-    <room>rooms\rmTut1</room>
-    <room>rooms\rmLevel2</room>
-    <room>rooms\rmLevel1</room>
     <rooms name="menus">
       <room>rooms\menu</room>
       <room>rooms\collectibles</room>
       <room>rooms\settings</room>
       <room>rooms\levelSelect</room>
     </rooms>
+    <room>rooms\rmLevel3</room>
+    <room>rooms\rmTut2</room>
+    <room>rooms\rmTut1</room>
+    <room>rooms\rmLevel2</room>
+    <room>rooms\rmLevel1</room>
     <room>rooms\rmLevel3</room>
     <room>rooms\rmTut1</room>
     <room>rooms\rmLevel2</room>

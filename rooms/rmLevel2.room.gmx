@@ -104,7 +104,6 @@
     <instance objName="objPlatform" x="800" y="448" name="inst_BAEE4B60" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objTeleportLamp" x="672" y="448" name="inst_84E61705" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objEndLevel" x="800" y="448" name="inst_E6907EAF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objPlayer" x="128" y="352" name="inst_77DDBF28" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objRoomLevel2" x="32" y="0" name="inst_089F0670" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBridge" x="160" y="352" name="inst_63DB4E9B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objConnectLamp" x="512" y="384" name="inst_6DB6A4DE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

@@ -37,7 +37,7 @@ lightSize = 60;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="objPlayer">
+    <event eventtype="4" ename="objZooming">
       <action>
         <libid>1</libid>
         <id>603</id>

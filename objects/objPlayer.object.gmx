@@ -37,11 +37,9 @@ lightSize = 60;
 alarm[0] = 1;
 alarm[1] = 1;
 
-<<<<<<< HEAD
 imagestart = 0;
 imageend = 0;
 
-=======
 stepSound = true;
 </string>
           </argument>
@@ -66,7 +64,6 @@ stepSound = true;
           <argument>
             <kind>1</kind>
             <string>stepSound = true;
->>>>>>> 5dcb67c4844e4cba84f1b3f05b25863fce274097
 </string>
           </argument>
         </arguments>

@@ -70,7 +70,6 @@
     <instance objName="objRoomTut2" x="0" y="0" name="inst_D4D3C3BC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objMouse" x="96" y="32" name="inst_E02F8EB9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objLightLevel" x="0" y="32" name="inst_D172E387" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objPlayer" x="416" y="160" name="inst_EB085986" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPlatform" x="288" y="192" name="inst_9ECC313F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPlatform" x="256" y="224" name="inst_E5F93C31" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objPlatform" x="224" y="224" name="inst_3D0415D4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
