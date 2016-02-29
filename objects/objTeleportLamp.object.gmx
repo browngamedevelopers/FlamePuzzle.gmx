@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>teleport = false;
 on = true;
+depth = -y - 1;
 
 image_speed = 0;
 image_index = 1;

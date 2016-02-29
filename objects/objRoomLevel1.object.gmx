@@ -25,26 +25,43 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Create Lamps and bridges
+            <string>//Player
+player = instance_position(320, 288, objPlayer);
 
-//Player
-player = instance_position(480, 192, objPlayer);
+//Create Lamps and bridges
+//top
+cl0 = instance_position(448, 352, objConnectLamp);
+cl1 = instance_position(480, 352, objConnectLamp);
+cl2 = instance_position(512, 352, objConnectLamp);
 
-//Maybe make these arrays to access them easier?
-cl0 = instance_position(544, 288, objConnectLamp);
-cl1 = instance_position(416, 416, objConnectLamp);
-cl2 = instance_position(544, 416, objConnectLamp);
-cl3 = instance_position(416, 576, objConnectLamp);
-cl4 = instance_position(544, 576, objConnectLamp);
+br0 = instance_position(448, 288, objBridge);
+br1 = instance_position(480, 288, objBridge);
+br2 = instance_position(512, 288, objBridge);
 
-br0 = instance_position(480, 288, objBridge);
-br1 = instance_position(480, 576, objBridge);
-br2 = instance_position(448, 352, objBridge);
-br3 = instance_position(512, 352, objBridge);
+//right
+cl3 = instance_position(576, 416, objConnectLamp);
+cl4 = instance_position(704, 416, objConnectLamp);
+cl5 = instance_position(704, 448, objConnectLamp);
+cl6 = instance_position(576, 480, objConnectLamp);
 
-tl0 = instance_position(352, 352, objTeleportLamp);
-tl1 = instance_position(608, 352, objTeleportLamp);
-tl2 = instance_position(480, 480, objTeleportLamp);
+
+br3 = instance_position(608, 416, objBridge);
+br4 = instance_position(672, 416, objBridge);
+br5 = instance_position(608, 448, objBridge);
+br6 = instance_position(672, 448, objBridge);
+br7 = instance_position(608, 480, objBridge);
+br8 = instance_position(672, 480, objBridge);
+
+//bottom
+cl7 = instance_position(512, 640, objConnectLamp);
+cl8 = instance_position(544, 640, objConnectLamp);
+cl9 = instance_position(576, 640, objConnectLamp);
+cl10 = instance_position(608, 640, objConnectLamp);
+
+br9 = instance_position(512, 576, objBridge);
+br10 = instance_position(544, 576, objBridge);
+br11 = instance_position(576, 576, objBridge);
+br12 = instance_position(608, 576, objBridge);
 
 
 </string>
@@ -69,48 +86,71 @@ tl2 = instance_position(480, 480, objTeleportLamp);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(cl0.on) {
+            <string>//top
+if(cl0.on) {
     instance_activate_object(br0);
 } else {
     instance_deactivate_object(br0);
 }
     
-if(!cl1.on) {
+if(cl1.on ^^ cl2.on) {
+    instance_activate_object(br1);
+} else {
+    instance_deactivate_object(br1);
+}
+if(cl2.on ) {
     instance_activate_object(br2);
 } else {
     instance_deactivate_object(br2);
 }
+//right
 
-if(!cl2.on) {
+
+if(cl3.on) {
     instance_activate_object(br3);
 } else {
     instance_deactivate_object(br3);
 }
 
-if(tl0.teleport) {
-    player.x = tl2.x;
-    player.y = tl2.y;
-    player.direction = 270;
-    tl0.teleport = false;
-}
-    
-if(tl1.teleport) {
-    player.x = tl2.x;
-    player.y = tl2.y;
-    player.direction = 270;
-    tl1.teleport = false;
+if(cl4.on) {
+    instance_activate_object(br4);
+} else {
+    instance_deactivate_object(br4);
 }
 
-if(cl3.on) {
-    instance_activate_object(cl4);
-} else {
-    instance_deactivate_object(cl4);
-}
 
-if(cl3.on &amp;&amp; cl4.on) {
-    instance_activate_object(br1);
+if(cl5.on) {
+    instance_activate_object(br6);
+    instance_deactivate_object(br8);
 } else {
-    instance_deactivate_object(br1);
+    instance_deactivate_object(br6);
+    instance_activate_object(br8);
+}
+if(cl6.on) {
+    instance_activate_object(br7);
+} else {
+    instance_deactivate_object(br7);
+}
+//bottom
+if(cl7.on ^^ cl9.on) {
+    instance_activate_object(br9);
+} else {
+    instance_deactivate_object(br9);
+}
+if(cl10.on) {
+    instance_activate_object(br10);
+} else {
+    instance_deactivate_object(br10);
+}
+if(cl8.on ) {
+    instance_activate_object(br11);
+} else {
+    instance_deactivate_object(br11);
+}
+if(cl7.on ^^ cl8.on ^^ cl10.on) {
+    instance_activate_object(br12);
+} else {
+    instance_deactivate_object(br12);
 }
 </string>
           </argument>

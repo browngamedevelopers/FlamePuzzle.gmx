@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sndFootstep</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprPlayer</sprite>
     <sprite>sprites\sprRelic</sprite>
@@ -53,12 +55,17 @@
     <object>objects\objLightLevel</object>
     <object>objects\objMouse</object>
     <object>objects\objPlayer</object>
+    <object>objects\objDeadPlayer</object>
     <object>objects\objRelic</object>
     <object>objects\objEndLevel</object>
     <objects name="rooms">
       <object>objects\objRoom0</object>
       <object>objects\objRoomTut1</object>
+      <object>objects\objRoomTut2</object>
       <object>objects\objRoom1</object>
+      <object>objects\objRoomLevel1</object>
+      <object>objects\objRoomLevel2</object>
+      <object>objects\objRoomLevel3</object>
       <object>objects\objRoomFork</object>
     </objects>
     <objects name="lamps">
@@ -89,18 +96,22 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rmLevel3</room>
+    <room>rooms\rmTut1</room>
+    <room>rooms\rmLevel2</room>
+    <room>rooms\rmLevel1</room>
+    <room>rooms\rmTut2</room>
     <rooms name="menus">
       <room>rooms\menu</room>
       <room>rooms\collectibles</room>
       <room>rooms\settings</room>
       <room>rooms\levelSelect</room>
     </rooms>
-    <room>rooms\rmTut1</room>
     <room>rooms\room0</room>
+    <room>rooms\rmLightDemo</room>
     <room>rooms\rmFork</room>
     <room>rooms\room1</room>
     <room>rooms\rmZoomDemo</room>
-    <room>rooms\rmLightDemo</room>
   </rooms>
   <constants number="2">
     <constant name="PLAYER_SPEED">8</constant>

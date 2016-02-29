@@ -36,6 +36,31 @@ lightSize = 60;
 
 alarm[0] = 1;
 alarm[1] = 1;
+
+stepSound = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>stepSound = true;
 </string>
           </argument>
         </arguments>
@@ -59,7 +84,7 @@ alarm[1] = 1;
           <argument>
             <kind>1</kind>
             <string>allowTeleport = true;
-alarm[1] = (BLOCK_SIZE/PLAYER_SPEED) * 8;
+//alarm[1] = (BLOCK_SIZE/PLAYER_SPEED) * 8;
 </string>
           </argument>
         </arguments>
@@ -82,7 +107,13 @@ alarm[1] = (BLOCK_SIZE/PLAYER_SPEED) * 8;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>left = position_meeting(x + lengthdir_x(BLOCK_SIZE, direction+90),
+            <string>under = position_meeting(x,y,objWalkable);
+
+if(!under) {
+    instance_change(objDeadPlayer,true);
+}
+
+left = position_meeting(x + lengthdir_x(BLOCK_SIZE, direction+90),
                      y + lengthdir_y(BLOCK_SIZE, direction+90), objWalkable);
 right = position_meeting(x + lengthdir_x(BLOCK_SIZE, direction-90),
                             y + lengthdir_y(BLOCK_SIZE, direction-90), objWalkable);
@@ -105,6 +136,13 @@ if(left &amp;&amp; !right &amp;&amp; !forward) {
     speed = 0;
     global.moving = false;
 }
+
+if (global.moving &amp;&amp; stepSound) {
+    stepSound = false;
+    audio_play_sound(sndFootstep, 10, false);
+    alarm[2] = STEP_INTERVAL;
+}
+
 alarm[0] = BLOCK_SIZE/PLAYER_SPEED;
 </string>
           </argument>
@@ -134,7 +172,7 @@ alarm[0] = BLOCK_SIZE/PLAYER_SPEED;
 
 var z = choose(-2, 0, 2);
 lightSize +=z;
-clamp(lightSize, 55, 74);
+lightSize = clamp(lightSize, 55, 74);
 /*tile = instance_position(x, y, objWalkable); // Walkable platform under the player
 
 if tile != noone {
