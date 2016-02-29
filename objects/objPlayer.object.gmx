@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>image_speed = .2;
 ///Player variables
 direction += 90; //Orients player up
 globalvar moving;
@@ -36,6 +36,10 @@ lightSize = 60;
 
 alarm[0] = 1;
 alarm[1] = 1;
+
+imagestart = 0;
+imageend = 0;
+
 </string>
           </argument>
         </arguments>
@@ -134,51 +138,65 @@ alarm[0] = BLOCK_SIZE/PLAYER_SPEED;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle = direction;
-
-
+            <string>//image_angle = direction;
 
 var z = choose(-2, 0, 2);
 lightSize +=z;
 lightSize = clamp(lightSize, 55, 74);
-/*tile = instance_position(x, y, objWalkable); // Walkable platform under the player
 
-if tile != noone {
-    tilewidthoff = (tile.sprite_width * 0.5) + 0.01;
-    tileheightoff = (tile.sprite_height * 0.5) + 0.01;
-    
-    leftdir = direction+90;
-    rightdir = direction-90;
-    
-    leftx = x + lengthdir_x(tilewidthoff, leftdir);
-    lefty = y + lengthdir_y(tileheightoff, leftdir);
-    
-    forwardx = x + lengthdir_x(tilewidthoff, direction);
-    forwardy = y + lengthdir_y(tileheightoff, direction);
-    
-    rightx = x + lengthdir_x(tilewidthoff, rightdir);
-    righty = y + lengthdir_y(tilewidthoff, rightdir);
-    
-    var left = position_meeting(leftx, lefty, objWalkable);
-    var forward = position_meeting(forwardx, forwardy, objWalkable);
-    var right = position_meeting(rightx, righty, objWalkable);
-    
-    if(forward) {
-        speed = 2;
-        global.moving = true;
-    } else if(left) {
-        direction += 90;
-    } else if(right) {
-        direction -= 90;
-    } else {
-        speed = 0;
-        global.moving = false;
+if(direction == 0){
+    if(!global.moving){
+        imagestart = 0;
+        imageend = 1;
+    }else {
+        imagestart = 0;
+        imageend = 4;
+    }
+}else if(direction == 90){
+    if(!global.moving){
+        imagestart = 4;
+        imageend = 4;
+    }else {
+        imagestart = 4;
+        imageend = 8;
+    }
+}else if(direction == 180){
+    if(!global.moving){
+        imagestart = 8;
+        imageend = 8;
+    }else {
+        imagestart = 8;
+        imageend = 12;
+    }
+}else if(direction == 270){
+    if(!global.moving){
+        imagestart = 12;
+        imageend = 12;
+    }else {
+        imagestart = 12;
+        imageend = 16;
     }
 }
-*/
+image_index = max(imagestart, image_index mod imageend);
 </string>
           </argument>
         </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="82">
+      <action>
+        <libid>1</libid>
+        <id>331</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_restart_game</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
   </events>

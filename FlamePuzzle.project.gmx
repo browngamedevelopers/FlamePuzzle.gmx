@@ -8,6 +8,7 @@
     <sound>sound\footstep</sound>
   </sounds>
   <sprites name="sprites">
+    <sprite>sprites\sprDeadPlayer</sprite>
     <sprite>sprites\sprPlayer</sprite>
     <sprite>sprites\sprRelic</sprite>
     <sprite>sprites\sprMouse</sprite>
@@ -85,10 +86,11 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rmLevel3</room>
+    <room>rooms\room14</room>
+    <room>rooms\rmTut2</room>
     <room>rooms\rmTut1</room>
     <room>rooms\rmLevel2</room>
     <room>rooms\rmLevel1</room>
-    <room>rooms\rmTut2</room>
     <rooms name="menus">
       <room>rooms\menu</room>
       <room>rooms\collectibles</room>
@@ -102,7 +104,7 @@
     <room>rooms\rmZoomDemo</room>
   </rooms>
   <constants number="2">
-    <constant name="PLAYER_SPEED">8</constant>
+    <constant name="PLAYER_SPEED">2</constant>
     <constant name="BLOCK_SIZE">32</constant>
   </constants>
   <help>

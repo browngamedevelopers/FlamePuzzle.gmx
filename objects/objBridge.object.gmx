@@ -26,8 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>depth = -y;
-
+image_index = random_range(0,3);
 lightSize = 60;
+image_speed = 0;
 </string>
           </argument>
         </arguments>

@@ -27,8 +27,11 @@
             <kind>1</kind>
             <string>clickable = false;
 on = false;
-image_speed = 0;
+image_speed = 0.2;
 lightSize = 60;
+
+imagestart = 0;
+imageend = 0;
 </string>
           </argument>
         </arguments>
@@ -54,6 +57,17 @@ lightSize = 60;
             <string>var z = choose(-2, 0, 2);
 lightSize +=z;
 lightSize = clamp(lightSize, 55, 74);
+
+if(!on){
+    imagestart = 0;
+    imageend = 8;
+}else{
+    imagestart = 8;
+    imageend = 14;
+}
+show_debug_message(on);
+
+image_index = max(imagestart, image_index mod imageend);
 </string>
           </argument>
         </arguments>
@@ -123,7 +137,6 @@ lightSize = clamp(lightSize, 55, 74);
           <argument>
             <kind>1</kind>
             <string>if(clickable &amp;&amp; !global.moving) {
-    image_index += 1;
     on = !on;
 }
 </string>

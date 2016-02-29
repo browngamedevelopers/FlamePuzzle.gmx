@@ -25,12 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0.5;
+            <string>image_speed = 0.25;
 depth = -1000;
 numlights = 5;
 sizeperlight = 64;
 lightSize = numlights * sizeperlight;
-//cursor_sprite = sprMouse;
+window_set_cursor(cr_none);
 </string>
           </argument>
         </arguments>
