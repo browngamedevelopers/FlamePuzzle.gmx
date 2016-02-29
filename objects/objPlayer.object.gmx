@@ -60,8 +60,7 @@ stepSound = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_debug_message("ALARM");
-stepSound = true;
+            <string>stepSound = true;
 </string>
           </argument>
         </arguments>
@@ -139,7 +138,6 @@ if(left &amp;&amp; !right &amp;&amp; !forward) {
 }
 
 if (global.moving &amp;&amp; stepSound) {
-    show_debug_message("THIS HAPPENS");
     stepSound = false;
     audio_play_sound(sndFootstep, 10, false);
     alarm[2] = STEP_INTERVAL;
