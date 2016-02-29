@@ -5,7 +5,7 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\footstep</sound>
+    <sound>sound\sndFootstep</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprPlayer</sprite>
