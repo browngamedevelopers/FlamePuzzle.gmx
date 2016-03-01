@@ -5,6 +5,7 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
+    <sound>sound\sndThemeMusic</sound>
     <sound>sound\sndFootstep</sound>
     <sound>sound\sndLampOn</sound>
     <sound>sound\sndLampOff</sound>
@@ -103,28 +104,18 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room14</room>
     <rooms name="menus">
       <room>rooms\menu</room>
       <room>rooms\collectibles</room>
       <room>rooms\settings</room>
       <room>rooms\levelSelect</room>
     </rooms>
-    <room>rooms\rmLevel3</room>
-    <room>rooms\rmTut2</room>
     <room>rooms\rmTut1</room>
-    <room>rooms\rmLevel2</room>
-    <room>rooms\rmLevel1</room>
-    <room>rooms\rmLevel3</room>
-    <room>rooms\rmTut1</room>
-    <room>rooms\rmLevel2</room>
-    <room>rooms\rmLevel1</room>
-    <room>rooms\rmTut2</room>
-    <room>rooms\room0</room>
-    <room>rooms\rmLightDemo</room>
     <room>rooms\rmFork</room>
-    <room>rooms\room1</room>
-    <room>rooms\rmZoomDemo</room>
+    <room>rooms\rmTut2</room>
+    <room>rooms\rmLevel1</room>
+    <room>rooms\rmLevel2</room>
+    <room>rooms\rmLevel3</room>
   </rooms>
   <constants number="2">
     <constant name="PLAYER_SPEED">2</constant>

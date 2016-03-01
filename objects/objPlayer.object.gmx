@@ -29,18 +29,17 @@
 ///Player variables
 direction += 90; //Orients player up
 globalvar moving;
-
 allowTeleport = true;
 depth = -5000;
 lightSize = 60;
 
 alarm[0] = 1;
 alarm[1] = 1;
+alarm[2] = 1;
 
 imagestart = 0;
 imageend = 0;
 
-stepSound = true;
 </string>
           </argument>
         </arguments>
@@ -63,7 +62,11 @@ stepSound = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>stepSound = true;
+            <string>///Playing Footstep audio
+if (global.moving) {
+    audio_play_sound(sndFootstep, 10, false);
+}
+alarm[2] = STEP_INTERVAL;
 </string>
           </argument>
         </arguments>
@@ -87,7 +90,6 @@ stepSound = true;
           <argument>
             <kind>1</kind>
             <string>allowTeleport = true;
-//alarm[1] = (BLOCK_SIZE/PLAYER_SPEED) * 8;
 </string>
           </argument>
         </arguments>
@@ -113,6 +115,7 @@ stepSound = true;
             <string>under = position_meeting(x,y,objWalkable);
 
 if(!under) {
+    speed = 0;
     instance_change(objDeadPlayer,true);
 }
 
@@ -140,11 +143,7 @@ if(left &amp;&amp; !right &amp;&amp; !forward) {
     global.moving = false;
 }
 
-if (global.moving &amp;&amp; stepSound) {
-    stepSound = false;
-    audio_play_sound(sndFootstep, 10, false);
-    alarm[2] = STEP_INTERVAL;
-}
+
 
 alarm[0] = BLOCK_SIZE/PLAYER_SPEED;
 </string>
@@ -169,7 +168,7 @@ alarm[0] = BLOCK_SIZE/PLAYER_SPEED;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//image_angle = direction;
+            <string>///Changing Sprite and Light Level
 
 var z = choose(-2, 0, 2);
 lightSize +=z;

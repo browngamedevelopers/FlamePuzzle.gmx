@@ -84,6 +84,7 @@
     <instance objName="objConnectLamp" x="544" y="416" name="inst_198FA54E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBridge" x="512" y="352" name="inst_77596C8C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBridge" x="448" y="352" name="inst_EE059D4B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objPlayer" x="480" y="192" name="inst_5775FD3F" locked="0" code="direction = 270;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -459,7 +459,7 @@
   <ConfigConstants>
     <constants number="2">
       <constant name="LEVELS">8</constant>
-      <constant name="STEP_INTERVAL">5</constant>
+      <constant name="STEP_INTERVAL">12</constant>
     </constants>
   </ConfigConstants>
 </Config>

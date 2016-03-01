@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>image_speed = 0.25;
 depth = -1000;
-numlights = 5;
+numlights = 1;
 sizeperlight = 64;
 lightSize = numlights * sizeperlight;
 window_set_cursor(cr_none);
@@ -58,7 +58,7 @@ y = mouse_y;
 
 var mainlightsize = numlights * sizeperlight;
 
-if(mouse_check_button_pressed(mb_left)){
+/*if(mouse_check_button_pressed(mb_left)){
     numlights -= 1;
     lightSize = numlights * sizeperlight;
     mainlightsize = numlights * sizeperlight;
@@ -68,7 +68,7 @@ if(mouse_check_button_pressed(mb_right)){
     lightSize = numlights * sizeperlight;
     mainlightsize = numlights * sizeperlight;
 }
-
+*/
 if(numlights == 0){
 lightSize = 0;
 } else {

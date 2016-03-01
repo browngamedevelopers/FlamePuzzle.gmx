@@ -33,6 +33,8 @@ instance_create(room_width / 2, room_height / 2 - 65, objSelectLevelButton);
 instance_create(room_width / 2, room_height / 2, objCollectiblesButton);
 instance_create(room_width / 2, room_height / 2 + 65, objSettingsButton);
 instance_create(room_width / 2, room_height / 2 + 130, objExitButton);
+
+audio_play_sound(sndThemeMusic, 20, true);
 </string>
           </argument>
         </arguments>

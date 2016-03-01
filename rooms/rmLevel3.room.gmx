@@ -96,6 +96,7 @@
     <instance objName="objConnectLamp" x="704" y="544" name="inst_AA2A10AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objRoomLevel3" x="32" y="0" name="inst_F02C4C87" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objEndLevel" x="544" y="384" name="inst_DFFCE307" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objPlayer" x="512" y="640" name="inst_02E1D347" locked="0" code="direction = 90;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

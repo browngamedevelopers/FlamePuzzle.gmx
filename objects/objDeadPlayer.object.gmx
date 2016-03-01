@@ -49,7 +49,7 @@ imageend = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>depth += 5000;
+            <string>depth = 5000;
 y+= 5;
 image_xscale *= 0.99;
 image_yscale *= 0.99;

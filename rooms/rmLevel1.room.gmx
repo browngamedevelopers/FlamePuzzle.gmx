@@ -99,6 +99,7 @@
     <instance objName="objBridge" x="480" y="288" name="inst_19CAC500" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBridge" x="512" y="288" name="inst_ED457087" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objRoomLevel1" x="32" y="0" name="inst_5EFC7DCF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objPlayer" x="320" y="288" name="inst_9CCD2FC3" locked="0" code="direction = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
