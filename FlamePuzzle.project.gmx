@@ -111,11 +111,11 @@
       <room>rooms\levelSelect</room>
     </rooms>
     <room>rooms\rmTut1</room>
-    <room>rooms\rmFork</room>
     <room>rooms\rmTut2</room>
     <room>rooms\rmLevel1</room>
     <room>rooms\rmLevel2</room>
     <room>rooms\rmLevel3</room>
+    <room>rooms\rmFork</room>
   </rooms>
   <constants number="2">
     <constant name="PLAYER_SPEED">2</constant>
