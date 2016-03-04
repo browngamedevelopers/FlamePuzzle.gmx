@@ -12,11 +12,15 @@
     <sound>sound\sndTeleport</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\sprDeadPlayer</sprite>
     <sprite>sprites\sprPlayer</sprite>
-    <sprite>sprites\sprRelic</sprite>
+    <sprite>sprites\sprDeadPlayer</sprite>
     <sprite>sprites\sprMouse</sprite>
+    <sprite>sprites\sprRelic</sprite>
+    <sprite>sprites\sprRope</sprite>
+    <sprite>sprites\sprTitle</sprite>
+    <sprite>sprites\sprLevel</sprite>
     <sprite>sprites\sprEndLevel</sprite>
+    <sprite>sprites\sprLock</sprite>
     <sprites name="lamps">
       <sprite>sprites\sprConnectLamp</sprite>
       <sprite>sprites\sprTeleportLamp</sprite>
@@ -27,16 +31,12 @@
     </sprites>
     <sprites name="buttons">
       <sprite>sprites\sprExitButton</sprite>
+      <sprite>sprites\sprBackButton</sprite>
       <sprite>sprites\sprNewGameButton</sprite>
       <sprite>sprites\sprSelectLevelButton</sprite>
       <sprite>sprites\sprCollectitblesButton</sprite>
       <sprite>sprites\sprSettingsButton</sprite>
     </sprites>
-    <sprite>sprites\sprLevel</sprite>
-    <sprite>sprites\sprLock</sprite>
-    <sprite>sprites\sprRope</sprite>
-    <sprite>sprites\sprBackButton</sprite>
-    <sprite>sprites\sprTitle</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\potential_tiles</background>
@@ -56,22 +56,20 @@
     <font>fonts\MenuSmaller</font>
   </fonts>
   <objects name="objects">
-    <object>objects\objZooming</object>
-    <object>objects\objLightLevel</object>
-    <object>objects\objMouse</object>
     <object>objects\objPlayer</object>
     <object>objects\objDeadPlayer</object>
+    <object>objects\objMouse</object>
     <object>objects\objRelic</object>
+    <object>objects\objZooming</object>
+    <object>objects\objLightLevel</object>
     <object>objects\objEndLevel</object>
     <objects name="rooms">
-      <object>objects\objRoom0</object>
       <object>objects\objRoomTut1</object>
       <object>objects\objRoomTut2</object>
-      <object>objects\objRoom1</object>
       <object>objects\objRoomLevel1</object>
       <object>objects\objRoomLevel2</object>
       <object>objects\objRoomLevel3</object>
-      <object>objects\objRoomFork</object>
+      <object>objects\objRoomTLoop</object>
     </objects>
     <objects name="lamps">
       <object>objects\objAllLamps</object>
@@ -111,11 +109,11 @@
       <room>rooms\levelSelect</room>
     </rooms>
     <room>rooms\rmTut1</room>
-    <room>rooms\rmFork</room>
     <room>rooms\rmTut2</room>
     <room>rooms\rmLevel1</room>
     <room>rooms\rmLevel2</room>
     <room>rooms\rmLevel3</room>
+    <room>rooms\rmTLoop</room>
   </rooms>
   <constants number="2">
     <constant name="PLAYER_SPEED">2</constant>

@@ -65,7 +65,6 @@ if(!on){
     imagestart = 8;
     imageend = 14;
 }
-show_debug_message(on);
 
 image_index = max(imagestart, image_index mod imageend);
 </string>
@@ -138,6 +137,7 @@ image_index = max(imagestart, image_index mod imageend);
             <kind>1</kind>
             <string>if(clickable &amp;&amp; !global.moving) {
     on = !on;
+    global.moving = true;
     if (on) {
         audio_play_sound(sndLampOn, 10, false);
     } else {
