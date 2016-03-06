@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>instance_create(room_width / 2, 340, objVolumeSlider);
-instance_create(room_width / 2, 420, objFullscreenToggle);
+instance_create(room_width / 2, 440, objFullscreenToggle);
 instance_create(44, 724, objBackButton);
 </string>
           </argument>

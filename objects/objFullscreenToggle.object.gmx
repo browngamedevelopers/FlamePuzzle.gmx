@@ -118,9 +118,9 @@ window_set_fullscreen(self.fullscreen);
           <argument>
             <kind>1</kind>
             <string>if (self.fullscreen) {
-    draw_text(self.x, self.y, "Windowed");
+    draw_text(self.x, self.y - 20, "Windowed");
 } else {
-    draw_text(self.x, self.y, "Fullscreen");
+    draw_text(self.x, self.y - 20, "Fullscreen");
 }
 </string>
           </argument>

@@ -101,7 +101,7 @@ room_goto(rmTut1);
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0</string>
+            <string>-20</string>
           </argument>
         </arguments>
       </action>

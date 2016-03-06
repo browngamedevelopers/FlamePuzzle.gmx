@@ -27,12 +27,12 @@
             <kind>1</kind>
             <string>script_execute(readSave);
 
-instance_create(room_width / 2, room_height / 5, objTitle);
-instance_create(room_width / 2, room_height / 2 - 130, objNewGameButton);
-instance_create(room_width / 2, room_height / 2 - 65, objSelectLevelButton);
-instance_create(room_width / 2, room_height / 2, objCollectiblesButton);
-instance_create(room_width / 2, room_height / 2 + 65, objSettingsButton);
-instance_create(room_width / 2, room_height / 2 + 130, objExitButton);
+instance_create(room_width / 2, room_height / 5 + 20, objTitle);
+instance_create(room_width / 2, room_height / 2 - 100, objNewGameButton);
+instance_create(room_width / 2, room_height / 2 - 25, objSelectLevelButton);
+instance_create(room_width / 2, room_height / 2 + 50, objCollectiblesButton);
+instance_create(room_width / 2, room_height / 2 + 125, objSettingsButton);
+instance_create(room_width / 2, room_height / 2 + 200, objExitButton);
 
 audio_play_sound(sndThemeMusic, 20, true);
 </string>
