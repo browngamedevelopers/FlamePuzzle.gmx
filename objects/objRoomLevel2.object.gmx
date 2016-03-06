@@ -168,7 +168,7 @@ if(cl6.on) {
 if(tl4.teleport) {
     player.x = tl6.x;
     player.y = tl6.y;
-    player.direction = 0;
+    player.direction = 90;
     tl4.teleport = false;
 }
 if(tl5.teleport) {

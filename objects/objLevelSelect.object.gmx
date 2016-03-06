@@ -28,7 +28,7 @@
             <string>containerOne = instance_create(132, 132, objLevelDisplay);
 with (containerOne) {
     image_index = 0;
-    targetRoom = room0;
+    //targetRoom = room0;
     level = 1;
     levelScore = global.levelScoreArray[0];
 }
@@ -40,7 +40,7 @@ if (global.levelCompleteArray[0] == 0) {
 containerTwo = instance_create(385, 132, objLevelDisplay);
 with (containerTwo) {
     image_index = 1;
-    targetRoom = room1;
+    //targetRoom = room1;
     level = 2;
     levelScore = global.levelScoreArray[1];
 }

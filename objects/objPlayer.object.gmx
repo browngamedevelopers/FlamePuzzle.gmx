@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = .2;
-///Player variables
+//Player variables
 direction += 90; //Orients player up
 globalvar moving;
 allowTeleport = true;
@@ -39,7 +39,6 @@ alarm[2] = 1;
 
 imagestart = 0;
 imageend = 0;
-
 </string>
           </argument>
         </arguments>
@@ -114,38 +113,37 @@ alarm[2] = STEP_INTERVAL;
             <kind>1</kind>
             <string>under = position_meeting(x,y,objWalkable);
 
-if(!under) {
-    speed = 0;
-    instance_change(objDeadPlayer,true);
-}
-
-left = position_meeting(x + lengthdir_x(BLOCK_SIZE, direction+90),
-                     y + lengthdir_y(BLOCK_SIZE, direction+90), objWalkable);
-right = position_meeting(x + lengthdir_x(BLOCK_SIZE, direction-90),
-                            y + lengthdir_y(BLOCK_SIZE, direction-90), objWalkable);
-
-forward = position_meeting(x + lengthdir_x(BLOCK_SIZE, direction),
-                     y + lengthdir_y(BLOCK_SIZE, direction), objWalkable);
-
-if(left &amp;&amp; !right &amp;&amp; !forward) {
-    direction += 90;
-    speed = PLAYER_SPEED;
-    global.moving = true;
-} else if(right &amp;&amp; !left &amp;&amp; !forward) {
-    direction -= 90;   
-    speed = PLAYER_SPEED;
-    global.moving = true;
-} else if(forward &amp;&amp; !left &amp;&amp; !right) {
-    speed = PLAYER_SPEED;
-    global.moving = true;
+if(under) {
+    left = position_meeting(x + lengthdir_x(BLOCK_SIZE, direction+90),
+                         y + lengthdir_y(BLOCK_SIZE, direction+90), objWalkable);
+    right = position_meeting(x + lengthdir_x(BLOCK_SIZE, direction-90),
+                                y + lengthdir_y(BLOCK_SIZE, direction-90), objWalkable);
+    
+    forward = position_meeting(x + lengthdir_x(BLOCK_SIZE, direction),
+                         y + lengthdir_y(BLOCK_SIZE, direction), objWalkable);
+    
+    if(left &amp;&amp; !right &amp;&amp; !forward) {
+        direction += 90;
+        speed = PLAYER_SPEED;
+        global.moving = true;
+    } else if(right &amp;&amp; !left &amp;&amp; !forward) {
+        direction -= 90;   
+        speed = PLAYER_SPEED;
+        global.moving = true;
+    } else if(forward &amp;&amp; !left &amp;&amp; !right) {
+        speed = PLAYER_SPEED;
+        global.moving = true;
+    } else {
+        speed = 0;
+        global.moving = false;
+    }
+    
+    alarm[0] = BLOCK_SIZE/PLAYER_SPEED;
 } else {
     speed = 0;
-    global.moving = false;
+    moving = true;
+    instance_change(objDeadPlayer,true);
 }
-
-
-
-alarm[0] = BLOCK_SIZE/PLAYER_SPEED;
 </string>
           </argument>
         </arguments>
@@ -223,6 +221,38 @@ image_index = max(imagestart, image_index mod imageend);
         <useapplyto>0</useapplyto>
         <exetype>1</exetype>
         <functionname>action_restart_game</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="9" enumb="39">
+      <action>
+        <libid>1</libid>
+        <id>222</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_next_room</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="9" enumb="37">
+      <action>
+        <libid>1</libid>
+        <id>221</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_previous_room</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>

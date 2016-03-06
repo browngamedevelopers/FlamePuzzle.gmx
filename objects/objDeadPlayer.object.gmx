@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>imagestart = 0;
 imageend = 0;
+speed = 0;
 </string>
           </argument>
         </arguments>

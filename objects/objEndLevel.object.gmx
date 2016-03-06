@@ -48,7 +48,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto_next();
+            <string>if(room_exists(room_next(room))){
+room_goto_next();
+} else {
+room_goto(menu);
+}
 </string>
           </argument>
         </arguments>

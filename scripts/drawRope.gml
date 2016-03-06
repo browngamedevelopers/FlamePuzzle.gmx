@@ -15,7 +15,7 @@ for (r=0; r<dist; r+=w) {
   if (r<dist - w) {
     xx = x1 + lengthdir_x(r, dir);
     yy = y1 + lengthdir_y(r, dir);
-    draw_sprite_ext(spr, 0, xx, yy, 1, 1, dir, c_white, 1);
+    draw_sprite_ext(spr, subimg, xx, yy, 1, 1, dir, c_white, 1);
   }
 }
 
