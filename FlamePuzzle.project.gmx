@@ -12,12 +12,14 @@
     <sound>sound\sndTeleport</sound>
   </sounds>
   <sprites name="sprites">
+    <sprite>sprites\sprLightRay</sprite>
+    <sprite>sprites\sprEndShrine</sprite>
+    <sprite>sprites\sprite20</sprite>
     <sprite>sprites\sprBlueBeam</sprite>
     <sprite>sprites\sprPlayer</sprite>
     <sprite>sprites\sprDeadPlayer</sprite>
     <sprite>sprites\sprMouse</sprite>
     <sprite>sprites\sprRelic</sprite>
-    <sprite>sprites\sprRope</sprite>
     <sprite>sprites\sprTitle</sprite>
     <sprite>sprites\sprLevel</sprite>
     <sprite>sprites\sprEndLevel</sprite>
@@ -40,7 +42,7 @@
     </sprites>
   </sprites>
   <backgrounds name="background">
-    <background>background\potential_tiles</background>
+    <background>background\bg_tiles</background>
     <background>background\menuBG</background>
   </backgrounds>
   <paths name="paths"/>
@@ -57,9 +59,15 @@
     <font>fonts\MenuSmaller</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obDrawRope</object>
-    <object>objects\objPlayer</object>
-    <object>objects\objDeadPlayer</object>
+    <object>objects\objEndShrine</object>
+    <object>objects\objDrawLight</object>
+    <objects name="Players">
+      <object>objects\objAnyPlayer</object>
+      <object>objects\objPlayer</object>
+      <object>objects\objStartPlayer</object>
+      <object>objects\objRisingPlayer</object>
+      <object>objects\objDeadPlayer</object>
+    </objects>
     <object>objects\objMouse</object>
     <object>objects\objRelic</object>
     <object>objects\objZooming</object>
@@ -103,19 +111,24 @@
       <object>objects\objReliquary</object>
     </objects>
   </objects>
+  <timelines name="timelines">
+    <timeline>timelines\timeline0</timeline>
+  </timelines>
   <rooms name="rooms">
+    <room>rooms\rmEndGame</room>
+    <room>rooms\rmTut1</room>
     <rooms name="menus">
       <room>rooms\menu</room>
       <room>rooms\collectibles</room>
       <room>rooms\settings</room>
       <room>rooms\levelSelect</room>
     </rooms>
-    <room>rooms\rmTut1</room>
     <room>rooms\rmTut2</room>
     <room>rooms\rmLevel2</room>
     <room>rooms\rmLevel1</room>
     <room>rooms\rmLevel3</room>
     <room>rooms\rmTLoop</room>
+    <room>rooms\room11</room>
   </rooms>
   <constants number="2">
     <constant name="PLAYER_SPEED">2</constant>

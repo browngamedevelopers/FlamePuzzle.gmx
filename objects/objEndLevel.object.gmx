@@ -48,11 +48,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(room_exists(room_next(room))){
-room_goto_next();
-} else {
-room_goto(menu);
-}
+            <string>newplayer = instance_create(other.x,other.y,objRisingPlayer);
+newplayer.direction = other.direction;
+with(other){instance_destroy();}
 </string>
           </argument>
         </arguments>

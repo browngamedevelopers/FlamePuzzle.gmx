@@ -30,6 +30,8 @@
 //Player
 player = instance_position(416, 160, objPlayer);
 player.direction = -270;
+startplayer = instance_create(player.x, 0, objStartPlayer);
+instance_deactivate_object(player);
 
 cl0 = instance_position(448, 192, objConnectLamp);
 cl1 = instance_position(320, 160, objConnectLamp);
@@ -66,7 +68,13 @@ tl1 = instance_position(288, 224, objTeleportLamp);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(cl0.on) {
+            <string>if(instance_exists(startplayer) &amp;&amp; startplayer.y 
+    &gt;= player.y){
+    with(startplayer){instance_destroy()};
+    instance_activate_object(player);
+}
+
+if(cl0.on) {
     instance_activate_object(br0);
 } else {
     instance_deactivate_object(br0);

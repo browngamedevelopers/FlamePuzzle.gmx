@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>//Player
 player = instance_position(320, 288, objPlayer);
+startplayer = instance_create(player.x, 0, objStartPlayer);
+instance_deactivate_object(player);
 
 //Create Lamps and bridges
 //top
@@ -87,6 +89,13 @@ br12 = instance_position(608, 576, objBridge);
           <argument>
             <kind>1</kind>
             <string>//top
+
+if(instance_exists(startplayer) &amp;&amp; startplayer.y 
+    &gt;= player.y){
+    with(startplayer){instance_destroy()};
+    instance_activate_object(player);
+}
+
 if(cl0.on) {
     instance_activate_object(br0);
 } else {

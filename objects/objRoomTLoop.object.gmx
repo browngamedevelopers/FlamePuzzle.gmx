@@ -29,6 +29,8 @@
 
 //Player
 player = instance_position(512, 736, objPlayer);
+startplayer = instance_create(player.x, 0, objStartPlayer);
+instance_deactivate_object(player);
 
 c1 = instance_position(640, 128, objConnectLamp);
 c2 = instance_position(768, 96, objConnectLamp);
@@ -118,7 +120,14 @@ t_a2 = instance_position(736, 32, objTeleportLamp);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(c1.on) {
+            <string>if(instance_exists(startplayer) &amp;&amp; startplayer.y 
+    &gt;= player.y){
+    with(startplayer){instance_destroy()};
+    instance_activate_object(player);
+}
+
+
+if(c1.on) {
     instance_activate_object(br1a);
     instance_activate_object(br1b);
     instance_activate_object(br1c);

@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>global.lightlevel=surface_create(room_width,room_height);
 depth = -5000000
+darknessamount = .85;
+drawingcolor = c_black;
 </string>
           </argument>
         </arguments>
@@ -50,30 +52,22 @@ depth = -5000000
           <argument>
             <kind>1</kind>
             <string>surface_set_target(global.lightlevel);              
-draw_clear_alpha(c_black,0.85);
+draw_clear_alpha(drawingcolor,darknessamount);
 draw_set_blend_mode(bm_subtract);
 
 var j;
 var i;
 var numcircles = 30;
 var largestsize;
-if(instance_exists(objPlayer)) {
+if(instance_exists(objAnyPlayer)) {
     draw_set_alpha(1/numcircles);
     for (i=0; i&lt;= numcircles; i++){
-    largestsize = objPlayer.lightSize;
-        draw_circle(objPlayer.x, objPlayer.y,
+    largestsize = objAnyPlayer.lightSize;
+        draw_circle(objAnyPlayer.x, objAnyPlayer.y,
              largestsize - (largestsize/numcircles)*i, false);
     }
 }
 
-if(instance_exists(objDeadPlayer)) {
-    draw_set_alpha(1/numcircles);
-    for (i=0; i&lt;= numcircles; i++){
-    largestsize = objDeadPlayer.lightSize;
-        draw_circle(objDeadPlayer.x, objDeadPlayer.y,
-             largestsize - (largestsize/numcircles)*i, false);
-    }
-}
 
 /*draw_set_alpha(1/numcircles);
 for (i=0; i&lt;= numcircles; i++){
@@ -82,13 +76,15 @@ for (i=0; i&lt;= numcircles; i++){
          largestsize - (largestsize/numcircles)*i, false);
 }*/
 
-numcircles = 30;
-//largestsize = 64;
-draw_set_alpha(1/numcircles);
-for (i=0; i&lt;= numcircles; i++){
-    largestsize = objMouse.lightSize;
-    draw_circle(mouse_x, mouse_y,
-         largestsize - (largestsize/numcircles)*i, false);
+if(instance_exists(objMouse)){
+    numcircles = 30;
+    //largestsize = 64;
+    draw_set_alpha(1/numcircles);
+    for (i=0; i&lt;= numcircles; i++){
+        largestsize = objMouse.lightSize;
+        draw_circle(mouse_x, mouse_y,
+             largestsize - (largestsize/numcircles)*i, false);
+    }
 }
 
 var lightalamp;
